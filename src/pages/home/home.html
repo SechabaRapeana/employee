@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Employee App
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    
+        <ion-item>
+            <ion-label fixed >Employee ID</ion-label>
+            <ion-input type="text" value="" (change)="add1($event)"></ion-input>
+          </ion-item>
+          
+
+          <ion-item>
+      <ion-label fixed >Name</ion-label>
+      <ion-input type="text" value="" (change)="add2($event)"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label fixed >Surname</ion-label>
+      <ion-input type="" value="" (change)="add3($event)"></ion-input>
+    </ion-item>
+  
+    
+
+   
+    <ion-item>
+      <ion-label fixed>Role </ion-label>
+      <ion-input type="text" value="" (change)="add4($event)"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button type="submit" value="submit" (click)="PushMethod()">Add</button>
+  <!-- <button ion-button type="submit" value="submit" (click)="Update(a)">Update</button> -->
+  <button ion-button type="submit" value="submit" (click)=" getIndex(a)">Delete</button>
+
+  
+    <ion-list *ngFor ="let x of EmployeeArray, let a = index ">
+      <br>
+        {{ x }}
+    </ion-list>
+
+</ion-content>
